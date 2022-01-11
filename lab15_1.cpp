@@ -1,9 +1,19 @@
 #include <iostream>
+#include<algorithm>
 using namespace std;
 
 template <typename T>
 void insertionSort(T d[],int N){
-
+    for(int i=1;i<N;i++){
+        int k=i;
+			while(k-1>=0&&d[k-1]<d[k]){
+				swap(d[k-1],d[k]);
+				k-=1;
+			}
+		cout << "Pass"<<" "<<i<<":";
+		for(int i = 0; i < N; i++) cout << d[i] << " "; 
+		cout << endl;
+    }
 }
 
 int main(){
